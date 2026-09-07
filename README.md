@@ -320,7 +320,7 @@ Let:
 
 A deliberately simplified representation is:
 
-\[
+```math
 \Delta C_{total}
 =
 \Delta C_m
@@ -332,7 +332,7 @@ A deliberately simplified representation is:
 E
 -
 B
-\]
+```
 
 This is not intended as a predictive equation yet.
 
@@ -340,9 +340,9 @@ Its purpose is to force the complete causal structure onto the page.
 
 The most common discussion includes only:
 
-\[
+```math
 \Delta C_{total} \approx \Delta C_m
-\]
+```
 
 The Substrate Demand Cascade hypothesis says that this may omit a material indirect term.
 
@@ -549,13 +549,18 @@ A useful output would be several scenarios rather than one forecast:
 
 A useful hypothesis needs failure conditions.
 
+The strongest counter-pressure on Channel B is **efficiency-driven decoupling**: more traffic or more digital activity does not automatically translate into proportionally more electricity demand. The IEA has documented periods in which internet traffic, data-centre workloads, and network traffic rose far faster than electricity use because hardware efficiency, hyperscale consolidation, caching, and network efficiency absorbed much of the growth. During the 2020 COVID traffic surge, some European network operators reported roughly 50% or greater traffic increases while network electricity use remained approximately flat.
+
+That means the human-time channel should never be modeled as "one extra digital hour = a fixed number of extra watts." The relevant quantity is **marginal infrastructure intensity by workload**. Cached video delivery, AI inference, video generation, game streaming, transcoding, storage, simulation, and autonomous agents can all respond very differently to the same extra hour of human activity.
+
 The indirect cascade would be weaker than proposed if:
 
 - displaced labor loses purchasing power and paid digital demand contracts;
 - humans allocate most released time to offline activity;
 - digital usage is already near saturation and extra free time adds little;
 - local/on-device compute absorbs most new workloads;
-- compression, caching, hardware efficiency, and software efficiency outpace demand growth;
+- compression, caching, hardware efficiency, hyperscale consolidation, and software efficiency outpace utilization growth;
+- most additional human time flows into low-marginal-cost delivered content rather than compute-, storage-, generation-, or agent-intensive activity;
 - subscription providers aggressively meter or cap heavy usage;
 - autonomous systems reduce rather than increase total digital activity;
 - energy, grid, chip, water, permitting, or construction bottlenecks prevent latent demand from becoming actual consumption;
@@ -563,6 +568,13 @@ The indirect cascade would be weaker than proposed if:
 - the relationship between free time and digital activity is substantially weaker than the COVID-era analogy suggests.
 
 Any serious test of the hypothesis should look for these outcomes, not only evidence that confirms it.
+
+Relevant evidence:
+
+- IEA — *Data Centres and Data Transmission Networks*  
+  https://www.iea.org/energy-system/buildings/data-centres-and-data-transmission-networks
+- IEA — *Energy Efficiency 2020: Appliances*  
+  https://www.iea.org/reports/energy-efficiency-2020/appliances
 
 ---
 
@@ -706,14 +718,14 @@ The proposed contribution is the bridge between them:
 
 ## 22. A note on how this was written
 
-The originating connection and hypothesis came from Jaron K. Bragg.
+The originating connection and hypothesis came from **Jaron K. Bragg**.
 
-ChatGPT was used to help formalize the mechanism, separate supported claims from conditional ones, identify related research, structure the argument, and locate public sources.
+**ChatGPT / OpenAI** assisted with the initial formalization, research, structure, confidence tiers, falsification framing, source discovery, and first repository draft.
 
-The purpose of stating that plainly is provenance, not credentialing.
+**Claude / Anthropic** later provided an independent review of the public draft, identifying the GitHub math-rendering defect, challenging the infrastructure base-year reference, strengthening the efficiency/decoupling counterargument, and recommending that the provenance record be updated to reflect its contribution. The IEA base-year challenge was checked against the newer 2026 IEA outlook; the README's 2025 → 2030 framing was retained because the newer source supports it. The other substantive review points were incorporated into this revision.
 
-The hypothesis should stand or fail on whether the mechanism is coherent, measurable, and supported by evidence.
+The purpose of stating these roles plainly is provenance, not credentialing. AI assistance does not transfer authorship of the originating hypothesis, and naming the models does not make their suggestions authoritative. Claims should stand or fail on whether the mechanism is coherent, measurable, reproducible where applicable, and supported by evidence.
 
 ---
 
-*End of Version 0.1 — September 7, 2026.*
+*End of Version 0.2 — September 7, 2026.*
